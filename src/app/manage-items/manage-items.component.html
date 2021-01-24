@@ -30,26 +30,26 @@
                 </div>
                 <!-- /.card-header -->
                 <!-- form start -->
-                <form role="form">
+                <form id="frm-items" role="form">
                   <div class="card-body">
                     <div class="form-group">
                       <label for="txt-code">Item Code</label>
-                      <input type="text" class="form-control" id="txt-code" placeholder="Enter the item code">
+                      <input name="code" type="text" class="form-control" id="txt-code" placeholder="Enter the item code">
                     </div>
                     <div class="form-group">
                       <label for="txt-description">Item Description</label>
-                      <input type="text" class="form-control" id="txt-description" placeholder="Enter the item description">
+                      <input name="description" type="text" class="form-control" id="txt-description" placeholder="Enter the item description">
                     </div>
                     <div class="form-group">
                       <label for="txt-qty">Qty. On Hand</label>
-                      <input type="text" class="form-control" id="txt-qty" placeholder="Enter the qty. on hand">
+                      <input name="qty" type="text" class="form-control" id="txt-qty" placeholder="Enter the qty. on hand">
                     </div>
                     <div class="form-group">
                       <label for="txt-unitprice">Unit Price</label>
-                      <input type="text" class="form-control" id="txt-unitprice" placeholder="Enter the unitprice">
+                      <input name="unitPrice" type="text" class="form-control" id="txt-unitprice" placeholder="Enter the unitprice">
                     </div>                    
                     <div class="form-group">
-                      <button type="submit" class="btn btn-primary">Save</button>
+                      <button id="btn-save-item" type="button" class="btn btn-primary">Save</button>
                       <button type="reset" class="btn btn-warning">Clear</button>
                     </div>
                   </div>

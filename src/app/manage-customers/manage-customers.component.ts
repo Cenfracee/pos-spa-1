@@ -6,7 +6,6 @@ import '../../../node_modules/admin-lte/plugins/datatables-responsive/js/dataTab
 import '../../../node_modules/admin-lte/plugins/datatables-responsive/js/responsive.bootstrap4.min.js';
 import { deleteCustomer, getAllCustomers, saveCustomer } from '../service/customer.service';
 import { Customer } from '../model/customer';
-import { data } from 'jquery';
 
 $("app-manage-customers").replaceWith('<div id="manage-customers">' + manageCustomers + '</div>');
 var html = '<style>' + style + '</style>';
@@ -89,7 +88,7 @@ $("#btn-save").click(async () => {
 
     /* Font-end validation */
     if (!id.match(/^C\d{3}$/) || name.trim().length === 0 || address.trim().length === 0) {
-        alert("Invalid cutomer infromation");
+        alert("Invalid customer information");
         return;
     }
 

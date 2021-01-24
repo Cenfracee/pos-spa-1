@@ -4,7 +4,8 @@ import '../../../node_modules/admin-lte/plugins/datatables/jquery.dataTables.min
 import '../../../node_modules/admin-lte/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js';
 import '../../../node_modules/admin-lte/plugins/datatables-responsive/js/dataTables.responsive.min.js';
 import '../../../node_modules/admin-lte/plugins/datatables-responsive/js/responsive.bootstrap4.min.js';
-import { getAllItems, deleteItem } from '../service/item.service';
+import { getAllItems, deleteItem ,saveItem} from '../service/item.service';
+import {Item} from "../model/item";
 
 $("app-manage-items").replaceWith('<div id="manage-items">' + manageItems + '</div>');
 var html = '<style>' + style + '</style>';
@@ -58,3 +59,25 @@ $("#tbl-items tbody").on('click', 'tr .fas', async (event: Event)=>{
 });
 
 
+$("#btn-save-item").click(async () => {
+
+    let code = <string>$("#txt-code").val();
+    let description = <string>$("#txt-description").val();
+    let qtyOnHand = <number>$("#txt-qty").val();
+    let unitPrice = <number>$("#txt-unitprice").val();
+
+    /* Font-end validation */
+    if (!code.match(/^I\d{3}$/) || description.trim().length === 0 || qtyOnHand< 0||unitPrice<0) {
+        alert("Invalid item information");
+        return;
+    }
+
+    try {
+        await saveItem(new Item(code, description, qtyOnHand,unitPrice));
+        console.log("test");
+        alert("Item Saved");
+        loadAllItems();
+    } catch (error) {
+        alert("Failed to save the item");
+    }
+});

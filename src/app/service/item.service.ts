@@ -42,3 +42,23 @@ export function deleteItem(code: string): Promise<void>{
 
     });
 }
+
+export function saveItem(item: Item): Promise<void> {
+
+    return new Promise((resolve, reject) => {
+
+        $.ajax({
+            method: 'POST',
+            url: 'http://localhost:8080/pos/items',
+            contentType: 'application/x-www-form-urlencoded',
+            data: $("#frm-items").serialize()
+        }).then(()=>{
+            items.push(item);
+            resolve();
+        }).fail(()=>{
+            reject();
+        })
+
+    });
+
+}
