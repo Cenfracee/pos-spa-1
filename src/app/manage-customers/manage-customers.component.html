@@ -1,0 +1,85 @@
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1 class="m-0 text-dark">Manage Customers</h1>
+                </div><!-- /.col -->
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item active">Manage Customers</li>
+                    </ol>
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <!-- Main row -->
+            <div class="row">
+                <div class="col-12 col-lg-6">
+                    <div class="card card-primary">
+                        <div class="card-header">
+                            <h3 class="card-title">Customer Information</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <!-- form start -->
+                        <form id="frm-customers" role="form">
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <label for="txt-id">Customer ID</label>
+                                    <input name="id" type="text" class="form-control" id="txt-id"
+                                        placeholder="Enter the customer id">
+                                </div>
+                                <div class="form-group">
+                                    <label for="txt-name">Customer Name</label>
+                                    <input name="name" type="text" class="form-control" id="txt-name"
+                                        placeholder="Enter the customer name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="txt-address">Customer address</label>
+                                    <input name="address" type="text" class="form-control" id="txt-address"
+                                        placeholder="Enter the customer address">
+                                </div>
+                                <div class="form-group">
+                                    <button id="btn-save" type="button" class="btn btn-primary">Save</button>
+                                    <button type="reset" class="btn btn-warning">Clear</button>
+                                </div>
+                            </div>
+                            <!-- /.card-body -->
+                        </form>
+                    </div>
+                    <!-- /.card -->
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <table id="tbl-customers" class="table table-bordered table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Name</th>
+                                        <th>Address</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                        <!-- /.card-body -->
+                    </div>
+                    <!-- /.card -->
+                </div>
+            </div>
+            <!-- /.row (main row) -->
+        </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->

@@ -1,0 +1,21 @@
+#manage-customers {
+
+  #tbl-customers th:first-child, #tbl-customers td:first-child{
+    width: 80px;
+    text-align: center;
+  }
+
+  #tbl-customers th:last-child, #tbl-customers td:last-child{
+    width: 60px;
+    text-align: center;
+  }
+
+  .card{
+    height: 100%;
+  }
+
+  .pagination{
+    justify-content: flex-end;
+  }
+
+}
